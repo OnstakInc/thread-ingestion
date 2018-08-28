@@ -46,7 +46,7 @@ function start() {
 
                     }
 
-                }, 500);
+                }, 1000);
 
             })
             .on('error', function (error) {
