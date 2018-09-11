@@ -1,5 +1,5 @@
 #!/bin/bash
 
-ipAddress=$(hostname -i)
+ipAddress=$(hostname -I)
 
-ping ipAddress -s 64000 -i 0.1
+ping $ipAddress -s 64000 -i 0.1
