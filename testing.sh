@@ -42,8 +42,8 @@ cat > /var/testing/fileaccess.sh <<- EOM
 while true
 do
  	echo $(date +%b_%d_%Y_%H_%M_%S)
-    date +%b_%d_%Y_%H_%M_%S >> /var/testing/secretfile
-    sleep 6
+  date +%b_%d_%Y_%H_%M_%S >> /var/testing/secretfile
+  sleep 6
 done
 
 
