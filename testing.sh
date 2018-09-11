@@ -11,9 +11,7 @@ firewall-cmd --zone=public --permanent --add-port=8080/tcp
 
 firewall-cmd --reload
 
-ipAddress=$(hostname -I)
-
-ping $ipAddress -s 64000 -i 0.1
+ping $(hostname -I) -s 64000 -i 0.1
 EOM
 
 chmod +x /var/testing/ping.sh
