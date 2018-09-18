@@ -11,7 +11,15 @@ firewall-cmd --zone=public --permanent --add-port=8080/tcp
 
 firewall-cmd --reload
 
-ping $(hostname -I) -s 64000 -i 0.1
+#ping $(hostname -I) -s 64000 -i 0.1
+
+COUNTER=1
+while [  $COUNTER -lt 254 ]; do
+    echo IP Address 192.168.1.$COUNTER
+    ping 192.168.1.$COUNTER -c 4
+    let COUNTER=COUNTER+1 
+done
+
 EOM
 
 chmod +x /var/testing/ping.sh
